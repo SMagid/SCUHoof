@@ -107,26 +107,50 @@
 	<fieldset>
 		<h2 class="fs-title">Food</h2>
 		<h3 class="fs-subtitle">Please select which meal plan you are currently on.</h3>
+				<input type="radio" name="is_meal" value="preferred" />Preferred
+				<input type="radio" name="is_meal" value="basic"/>Basic
+				<input type="radio" name="is_meal" value="junior_senior"/>Junior Senior
+				<input type="radio" name="is_meal" value="basic"/>No meal plan
 		<h3 class="fs-subtitle">Please select which diet best applies to you. </h3>
+				<input type="radio" name="is_diet" value="vegan" />Vegan
+				<input type="radio" name="is_diet" value="vegetarian"/>Vegetarian
+				<input type="radio" name="is_diet" value="meat_eater"/>Omnivore
+				<input type="radio" name="is_diet" value="carnivore"/>X-treme meat eater
 		<h3 class="fs-subtitle">If you drink coffee please select from the following options: </h3>
+			<select id="food_coffee_type" onchange="food_coffee_select_handler()">
+				<option value="none">-Select-</option>
+				<option value="black_coffee">Black Coffee</option>
+				<option value="cream_sugar">Black Coffee + cream or sugar</option>
+				<option value="latte">Latte</option>
+			</select>
 		<h3 class="fs-subtitle">Do you buy food at farmers markets?</h3>
+		<input type="radio" name="food_farmers_market" value="yes" onclick="display_comment('comment_farmers_market','Great decision! Buying locally grown food lowers your carbon emissions')" /> yes &nbsp;
+		<input type="radio" name="food_farmers_market" value="no" onclick="display_comment('comment_farmers_market','You might want to check out the farmers market Saturday mornings in Santa Clara, or visit SCU&rsquo;s Forge Garden located on Benton Street.')" /> no
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 	<fieldset>
 		<h2 class="fs-title">Waste</h2>
 		<h3 class="fs-subtitle">From the following scale decide how much of your waste is recycled (the average person recycles around 17% of their waste)</h3>
+			<input type="radio" name="radio_recycle" value="below_avg" />Below Average<br />
+			<input type="radio" name="radio_recycle" value="avg" />Average<br />
+			<input type="radio" name="radio_recycle" value="above_avg" />Above Average<br />
 		<h3 class="fs-subtitle">From the following scale choose the amount of trash you accumulate/day (A bag of sugar weighs 4 lbs. The average person accumulates 4lbs trash/day)</h3>
-		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="button" name="next" class="next action-button" value="Next" />
+			<input type="button" name="previous" class="previous action-button" value="Previous" />
+			<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 	<fieldset>
 		<h2 class="fs-title">Water</h2>
 		<h3 class="fs-subtitle">On average how long are your showers?</h3>
+			<input id="water_showers_duration" type="text"  size="5" maxlength="4"/> minutes
 		<h3 class="fs-subtitle">On average how many showers/week?</h3>
+			<input id="water_showers_times" type="text"  size="5" maxlength="4"/> times
 		<h3 class="fs-subtitle">On average how many loads of laundry/month?</h3>
+			<input id="water_laundry" type="text"  size="5" maxlength="4"/> times
 		<h3 class="fs-subtitle">Average toilet flushes/day?</h3>
+			<input id="water_flush" type="text"  size="5" maxlength="4"/> flushes
 		<h3 class="fs-subtitle">Average cups of water you drink/day from tap or water fountain?</h3>
+			<input id="water_cups" type="text"  size="5" maxlength="4"/> cups <a class="help" id="help" title="The average water bottle holds around 2.5 cups and a larger liter bottle holds 4 cups"><img src="images/help.png" width="18px" /></a>
 		<h3 class="fs-subtitle">Do you use a refillable water bottle?</h3>
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
