@@ -1,6 +1,11 @@
 
 <LINK href="styles.css" rel="stylesheet" type="text/css">
 
+<script language="javascript" type="text/javascript" src="jquery.js"></script>
+<script language="javascript" type="text/javascript" src="jquery.msAccordion.js"></script>
+<script language="javascript" type="text/javascript" src="jquery.tipsy.js"></script>
+<script language="javascript" type="text/javascript" src="highchart.js"></script>
+<script language="javascript" type="text/javascript" src="carbon_calculator.js"></script>
 <!-- multistep form -->
 <form id="msform">
 	<!-- progressbar -->
@@ -12,6 +17,7 @@
 		<li>Energy</li>
 		<li>Food</li>
 		<li>Waste</li>
+		<li>Water</li>
 		<li>Results???</li>
 	</ul>
 	<!-- fieldsets -->
@@ -99,8 +105,141 @@
 	</fieldset>
 	<fieldset>
 		<h2 class="fs-title">Energy</h2>
-		<h3 class="fs-subtitle">If you're an on campus resident choose from the following dorms: </h3>
-		<h3 class="fs-subtitle">This is complicated...see original</h3>
+		<h3 class="fs-subtitle">If you're an on campus resident choose from the following dorms:
+				<select id="energy_campus_resident">
+					<option value="none">None</option>
+					<option value="swig">Swig</option>
+					<option value="sobrato">Sobrato</option>
+					<option value="sanfilippo">Sanfilippo</option>
+					<option value="walsh">Walsh/McLaughlin</option>
+					<option value="graham">Graham</option>
+					<option value="dunne">Dunne</option>
+					<option value="casa">Casa</option>
+					<option value="campisi">Campisi</option>
+					<option value="clare">St. Clare</option>
+					<option value="nobili">Nobili</option>
+					<option value="bellarmine">Bellarmine </option>
+				</select>
+		</h3>
+		<h3 class="fs-subtitle">From the following list of appliances, electronics, lighting, etc, input how many of each item are in
+			 your dorm room and how many hours a day each item is plugged in. If you own an item not listed below please be sure to fill
+			 in extra fields: What is the item and wattage?
+			 You can find the wattage on the bottom of most appliances. Be sure to multiply by 1000 if the wattage is given in kilowatts.
+		</h3>
+		<table style="border-color:black; border:1px;">
+				<tr style="font-weight:bold; border-color:black; border-style:dashed; border:1px;">
+					<td>ITEM</td>
+					<td># of items</td>
+					<td>Watts</td>
+					<td>USAGE: hrs/day plugged in</td>
+				</tr>
+
+				<tr>
+					<td>Refrigerator</td>
+					<td><input id="appliance_1_total" type="text"  size="4" maxlength="1"/></td>
+					<td><input id="appliance_1_watts" type="hidden"  value="160" />160</td>
+					<td><input id="appliance_1_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Microwave</td>
+					<td><input id="appliance_2_total" type="text"  size="4" maxlength="1"/></td>
+					<td><input id="appliance_2_watts" type="hidden"  value="1000" />1000</td>
+					<td><input id="appliance_2_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Coffee maker</td>
+					<td><input id="appliance_4_total" type="text"  size="4" maxlength="1"/></td>
+					<td><input id="appliance_4_watts" type="hidden"  value="1200" />1200</td>
+					<td><input id="appliance_4_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Stereo sound system</td>
+					<td><input id="appliance_6_total" type="text"  size="4" maxlength="1"/></td>
+					<td><input id="appliance_6_watts" type="hidden"  value="150" />150</td>
+					<td><input id="appliance_6_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Computer desktop</td>
+					<td><input id="appliance_7_total" type="text"  size="4" maxlength="1"/></td>
+					<td><input id="appliance_7_watts" type="hidden"  value="225" />225</td>
+					<td><input id="appliance_7_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Computer, laptop</td>
+					<td><input id="appliance_9_total" type="text"  size="4" maxlength="1"/></td>
+					<td><input id="appliance_9_watts" type="hidden"  value="60" />60</td>
+					<td><input id="appliance_9_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Printer</td>
+					<td><input id="appliance_10_total" type="text"  size="4" maxlength="1"/></td>
+					<td><input id="appliance_10_watts" type="hidden"  value="100" />100</td>
+					<td><input id="appliance_10_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>TV</td>
+					<td><input id="appliance_11_total" type="text"  size="4" maxlength="1"/></td>
+					<td><input id="appliance_11_watts" type="hidden"  value="115" />115</td>
+					<td><input id="appliance_11_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Air conditioner</td>
+					<td><input id="appliance_13_total" type="text"  size="4" maxlength="1"/></td>
+					<td><input id="appliance_13_watts" type="hidden"  value="1100" />1,100</td>
+					<td><input id="appliance_13_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Portable fan</td>
+					<td><input id="appliance_14_total" type="text"  size="4" maxlength="1"/></td>
+					<td><input id="appliance_14_watts" type="hidden"  value="115" />115</td>
+					<td><input id="appliance_14_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Space heater</td>
+					<td><input id="appliance_15_total" type="text"  size="4" maxlength="1"/></td>
+					<td><input id="appliance_15_watts" type="hidden"  value="1000" />1000</td>
+					<td><input id="appliance_15_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Incandescent light bulb</td>
+					<td><input id="appliance_17_total" type="text"  size="4" maxlength="4"/></td>
+					<td><input id="appliance_17_watts" type="hidden"  value="75" />75</td>
+					<td><input id="appliance_17_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Compact fluorescent light bulb</td>
+					<td><input id="appliance_18_total" type="text"  size="4" maxlength="4"/></td>
+					<td><input id="appliance_18_watts" type="hidden"  value="20" />20</td>
+					<td><input id="appliance_18_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Vacuum cleaner</td>
+					<td><input id="appliance_19_total" type="text"  size="4" maxlength="1"/></td>
+					<td><input id="appliance_19_watts" type="hidden"  value="1440" />1440</td>
+					<td><input id="appliance_19_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+				<tr>
+					<td>Other <input id="other_energy_source" type="text"  size="20" maxlength="20"/></td>
+					<td><input id="appliance_20_total" type="text"  size="4" maxlength="4"/></td>
+					<td><input id="appliance_20_watts" type="text"  size="4" maxlength="5"/></td>
+					<td><input id="appliance_20_usage" type="text"  size="4" maxlength="4"/></td>
+				</tr>
+
+			</table>
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
@@ -156,15 +295,81 @@
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
 	<fieldset>
+	<!--
 		<h2 class="fs-title">Personal Details</h2>
 		<h3 class="fs-subtitle">We will never sell it</h3>
 		<input type="text" name="fname" placeholder="First Name" />
 		<input type="text" name="lname" placeholder="Last Name" />
 		<input type="text" name="phone" placeholder="Phone" />
 		<textarea name="address" placeholder="Address"></textarea>
+
+-->
+<div class="set result" id="result_tab">
+	<div class="title" onclick="showResult()">Result</div>
+	<div class="content">
+	<div id="pie_container" style="width: 560px; height: 400px; margin: 0 auto"></div>
+	<p>&nbsp;</p>
+		<table cellpadding="0" cellspacing="0">
+		<tr style="border-bottom:solid thin #000">
+			<th width="150px">Category</th>
+			<th>KgCO2e / year<a class="help" id="help" title="The tacked on &quot;e&quot; to kg CO2 means the carbon dioxide equivalent and is most widely used to measure greenhouse emissions.  All greenhouse gases have potential to warm the atmosphere, thus accounted for when you see emissions in terms of CO2e"> <img src="images/help.png" width="18px" /></a></th>
+			<th>Percentage</th></tr>
+
+		<tr>
+			<td style="font-weight:bold;">Transportation</td>
+			<td id="transportation_tab_total">empty</td>
+			<td id="transportation_tab_percentage">empty</td></tr>
+
+		<tr>
+			<td style="font-weight:bold;">Partying</td>
+			<td id="partying_tab_total">empty</td>
+			<td id="partying_tab_percentage">empty</td></tr>
+
+		<tr>
+			<td style="font-weight:bold;">Consumption</td>
+			<td id="consumption_tab_total">empty</td>
+			<td id="consumption_tab_percentage">empty</td></tr>
+
+		<tr>
+			<td style="font-weight:bold;">Energy</td>
+			<td id="energy_tab_total">empty</td>
+			<td id="energy_tab_percentage">empty</td></tr>
+
+		<tr>
+			<td style="font-weight:bold;">Food</td>
+			<td id="food_tab_total">empty</td>
+			<td id="food_tab_percentage">empty</td></tr>
+
+		<tr>
+			<td style="font-weight:bold;">Waste</td>
+			<td id="waste_tab_total">empty</td>
+			<td id="waste_tab_percentage">empty</td></tr>
+
+		<tr>
+			<td style="font-weight:bold;">Water</td>
+			<td id="water_tab_total">empty</td>
+			<td id="water_tab_percentage">empty</td></tr>
+		<tr>
+			<td style="font-weight:bold;">Total:</td>
+			<td style="font-weight:bold;" id="carbon_total">empty</td>
+			<td style="font-weight:bold;" id="carbon_total_percentage">empty</td></tr>
+		</table>
+
+		<br><h4>Your result compared to the carbon emissions of the average citizen in the following countries:</h4>
+		<div id="result_bar" style="z-index:100; position:relative; left:-25px;"></div>
+
+</div>
+</div>
+
+
+
+
+
+
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="submit" name="submit" class="submit action-button" value="Submit" />
 	</fieldset>
+
 
 </form>
 
