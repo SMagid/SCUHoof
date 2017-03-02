@@ -6,8 +6,7 @@
 
 html {
 	height: 100%;
-	/*Image only BG fallback*/
-	background: url('http://thecodeplayer.com/uploads/media/gs.png');
+        <!--background: url('http://thecodeplayer.com/uploads/media/gs.png');-->
 	/*background = gradient + image pattern combo*/
 	background:
 		linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)),
@@ -15,11 +14,12 @@ html {
 }
 
 body {
-	font-family: montserrat, arial, verdana;
+	font-family: adobe garamond;
+	background-color:#D9D9D9;
 }
 /*form styles*/
 #msform {
-	width: 60%;
+	width: 70%;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
@@ -50,14 +50,14 @@ body {
 	margin-bottom: 10px;
 	width: 100%;
 	box-sizing: border-box;
-	font-family: montserrat;
+	font-family: trajan;
 	color: #2C3E50;
 	font-size: 13px;
 }
 /*buttons*/
 #msform .action-button {
 	width: 100px;
-	background: #27AE60;
+	background: #b50043;  
 	font-weight: bold;
 	color: white;
 	border: 0 none;
@@ -67,7 +67,7 @@ body {
 	margin: 10px 5px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+	box-shadow: 0 0 0 2px white, 0 0 0 5px #b50043; 
 }
 /*headings*/
 .fs-title {
@@ -91,10 +91,10 @@ body {
 }
 #progressbar li {
 	list-style-type: none;
-	color: white;
+	color: black;
 	text-transform: uppercase;
 	font-size: 9px;
-	width: 12.50%;
+	width: 11%;
 	float: left;
 	position: relative;
 }
@@ -128,6 +128,6 @@ body {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
+	background: #b50043;
 	color: white;
 }
