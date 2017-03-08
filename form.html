@@ -29,6 +29,31 @@
 		<input type="radio" name="radio_commuter" value="part_commuter" onclick="display_tabs('show')" />Part-time Commuter Student or Faculty and staff<br />
 		<input type="button" name="next" class="next action-button" value="Next" />
 	</fieldset>
+	<!--
+<fieldset>
+
+  <div class="control-group">
+    <h1>Radio buttons</h1>
+    <label class="control control--radio">First radio
+      <input type="radio" name="radio" checked="checked"/>
+      <div class="control__indicator"></div>
+    </label>
+    <label class="control control--radio">Second radio
+      <input type="radio" name="radio"/>
+      <div class="control__indicator"></div>
+    </label>
+    <label class="control control--radio">Disabled
+      <input type="radio" name="radio2" disabled="disabled"/>
+      <div class="control__indicator"></div>
+    </label>
+    <label class="control control--radio">Disabled & checked
+      <input type="radio" name="radio2" disabled="disabled" checked="checked"/>
+      <div class="control__indicator"></div>
+    </label>
+  </div>
+
+</fieldset>
+!-->
 	<fieldset>
 		<h2 class="fs-title">Transportation</h2>
 		<h3 class="fs-subtitle">Do you longboard, skateboard, or bike to class?</h3>
@@ -292,7 +317,7 @@
 			<input id="water_cups" type="text"  size="5" maxlength="4"/> cups <a class="help" id="help" title="The average water bottle holds around 2.5 cups and a larger liter bottle holds 4 cups"><img src="images/help.png" width="18px" /></a>
 		<h3 class="fs-subtitle">Do you use a refillable water bottle?</h3>
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="button" name="next" class="next action-button" value="Next" />
+		<input type="button" name="next"  onclick="showResult()" class="next action-button" value="Next" />
 	</fieldset>
 	<fieldset>
 	<!--
@@ -305,7 +330,7 @@
 
 -->
 <div class="set result" id="result_tab">
-	<div class="title" onclick="showResult()">Result</div>
+<div class="title" >Result</div>
 	<div class="content">
 	<div id="pie_container" style="width: 560px; height: 400px; margin: 0 auto"></div>
 	<p>&nbsp;</p>
@@ -367,7 +392,7 @@
 
 
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="submit" name="submit" class="submit action-button" value="Submit" />
+	<!--	<input type="submit" name="submit" class="submit action-button" value="Submit" /> -->
 	</fieldset>
 
 
