@@ -257,33 +257,34 @@
 
 	<fieldset>
 		<h2 class="fs-title">Energy</h2>
-		<h3 class="fs-subtitle">If you're an on campus resident choose from the following dorms:
-				<select id="energy_campus_resident">
-					<option value="none">None</option>
-					<option value="swig">Swig</option>
-					<option value="sobrato">Sobrato</option>
-					<option value="sanfilippo">Sanfilippo</option>
-					<option value="walsh">Walsh/McLaughlin</option>
-					<option value="graham">Graham</option>
-					<option value="dunne">Dunne</option>
-					<option value="casa">Casa</option>
-					<option value="campisi">Campisi</option>
-					<option value="clare">St. Clare</option>
-					<option value="nobili">Nobili</option>
-					<option value="bellarmine">Bellarmine </option>
-				</select>
-		</h3>
+		<h2 class="fs-subtitle"> If you're an on campus resident choose from the following dorms:
+		<select class="soflow">
+			<option>Select an Option</option>
+			<option value="swig" onclick="display_tabs('show')">Swig</option>
+			<option value="sobrato" onclick="display_tabs('show')">Sobrato</option>
+			<option value="sanfilippo" onclick="display_tabs('show')">Sanfilippo</option>
+			<option value="walsh" onclick="display_tabs('show')">Walsh/McLaughlin</option>
+			<option value="graham" onclick="display_tabs('show')">Graham</option>
+			<option value="dunne" onclick="display_tabs('show')">Dunne</option>
+			<option value="casa" onclick="display_tabs('show')">Casa</option>
+			<option value="campisi" onclick="display_tabs('show')">Campisi</option>
+			<option value="clare" onclick="display_tabs('show')">St. Clare</option>
+			<option value="nobili" onclick="display_tabs('show')">Nobili</option>
+			<option value="bellarmine" onclick="display_tabs('show')">Bellarmine </option>
+		</select>
+
+
 		<h3 class="fs-subtitle">From the following list of appliances, electronics, lighting, etc, input how many of each item are in
 			 your dorm room and how many hours a day each item is plugged in. If you own an item not listed below please be sure to fill
 			 in extra fields: What is the item and wattage?
 			 You can find the wattage on the bottom of most appliances. Be sure to multiply by 1000 if the wattage is given in kilowatts.
 		</h3>
-		<table style="border-color:black; border:1px;">
-				<tr style="font-weight:bold; border-color:black; border-style:dashed; border:1px;">
-					<td width="40%" >ITEM</td>
-					<td width="30%"># of items</td>
-					<td width="10%">Watts</td>
-					<td width="20%">USAGE: hrs/day plugged in</td>
+		<table id="energytable" >
+				<tr style="font-weight:bold;">
+					<td width="25%" >ITEM</td>
+					<td width="20%"># of items</td>
+					<td width="25%">Watts</td>
+					<td width="30%">USAGE: hrs/day plugged in</td>
 				</tr>
 
 				<tr>
