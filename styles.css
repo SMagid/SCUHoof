@@ -44,11 +44,11 @@ body {
 }
 /*inputs*/
 #msform input, #msform textarea {
-	padding: 15px;
+	padding: 13px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	margin-bottom: 10px;
-	width: 100%;
+	margin-bottom: 2px;
+	width: 35%;
 	box-sizing: border-box;
 	font-family: trajan;
 	color: #2C3E50;
@@ -71,14 +71,14 @@ body {
 }
 /*headings*/
 .fs-title {
-	font-size: 15px;
+	font-size: 17px;
 	text-transform: uppercase;
 	color: #2C3E50;
 	margin-bottom: 10px;
 }
 .fs-subtitle {
 	font-weight: normal;
-	font-size: 13px;
+	font-size: 15px;
 	color: #666;
 	margin-bottom: 20px;
 }
