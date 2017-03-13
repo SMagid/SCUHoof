@@ -310,6 +310,29 @@ input[type="checkbox"]:checked + label span.checkbox::after {
    width: 268px;
 }
 
+/* -------------------- Table (energy section) */
+
+table#energytable{
+  height: 500px;
+  border-bottom: 1px solid #ddd;
+  padding: 0px;
+  border: 0px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  width: 90%;
+  box-sizing: border-box;
+  font-family: trajan;
+  color: #2C3E50;
+  font-size: 13px;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+tr:hover {background-color: #f5f5f5}
+
+
+
 /* -------------------- Rounded Corners */
 .rounded {
    -webkit-border-radius: 20px;
