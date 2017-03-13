@@ -19,7 +19,7 @@
         <li>Food</li>
         <li>Waste</li>
         <li>Water</li>
-        <li>Results???</li>
+        <li>Results</li>
     </ul>
     <!-- fieldsets -->
     <fieldset>
@@ -32,26 +32,11 @@
         <option value="part_commuter" onclick="display_tabs('show')">Part Time Commuter/Faculty/Staff</option>
       </select>
 
-      <!--
-      <div id="livingDiv" class="dropdown">
-        <button class="dropbtn">Living Situation</button>
-          <div class="dropdown-content">
-            <a value="on_campus" onclick="display_tabs('show')">Living On Campus</a>
-            <a value="full_commuter" onclick="display_tabs('show')">Living Off Campus / Full Time Commuter</a>
-            <a value="part_commuter" onclick="display_tabs('show')">Part Time Commuter / Faculty or Staff</a>
-          </div>
-        </div>
-      -->
-
-    <!--
-      <input type="radio" name="radio_commuter" value="on_campus" onclick="display_tabs('show')" />On Campus <br/>
-      <input type="radio" name="radio_commuter" value="full_commuter" onclick="display_tabs('show')" />Off Campus or Full-time Commuter Student<br/>
-      <input type="radio" name="radio_commuter" value="part_commuter" onclick="display_tabs('show')" />Part-time Commuter Student or Faculty and staff<br />
-    -->
       <input type="button" name="next" class="next action-button" value="Next" />
 
     </fieldset>
 
+    <!-- Transportation ------------------------------------------------------------------------------- -->           
 
     <fieldset>
   		<h2 class="fs-title">Transportation</h2>
@@ -68,11 +53,7 @@
       	</div>
   			<p class="pop_up_comment" id="comment_transportation_lsb"></p>
   		</section>
-  		<!--
-  			<input type="radio" name="trans_radio_lsb" value="yes" onclick="display_comment('comment_transportation_lsb','Great decision! You are not only staying healthy, but you are reducing your carbon emissions.')"/>Yes
-  			<input type="radio" name="trans_radio_lsb" value="no" onclick="display_comment('comment_transportation_lsb','Unless you are walking you might want to consider using one of these to help you get to class. Not only will you stay fit, but you can also reduce your carbon emissions.')"/>No
-  		<h3 class="fs-subtitle">What size car do you use?</h3>
-  	-->
+  		
   		<h3 class="fs-subtitle">If you answered no please seclect on of the following:</h3>
 
   		<select class="soflow">
@@ -84,15 +65,7 @@
   			<option value="hybrid">Hybrid</option>
   		</select>
 
-  		<!--
-  		<select id="trans_select_car" onchange="trans_car_select_handler()">
-  			<option value="no_car">no car</option>
-  			<option value="small">small</option>
-  			<option value="average">average</option>
-  			<option value="suv">SUV/truck</option>
-  			<option value="hybrid">hybrid</option>
-  		</select>
-  	-->
+  		
   		<h3 class="fs-subtitle"> Approximately how many miles do you drive per month </h3>
   		<input class="stdInput" id="trans_input_car_miles" type="text"  size="4" maxlength="4" />
   		<h3 class="fs-subtitle"> Miles <h3>
@@ -110,20 +83,10 @@
   			</div>
   		</section>
 
-  		<!--
-  		<input type="radio" name="trans_radio_use_bus" value="yes" onclick="display_question('show','trans_input_bus_miles')">Yes
-  		<input type="radio" name="trans_radio_use_bus" value="no" onclick="display_question('hide','trans_input_bus_miles')">No
-  		-->
 
   		<h3 class="fs-subtitle"> Approximately how many miles do you drive per month </h3>
   		<input class="stdInput" id="trans_input_bus_miles_q" type="text"  size="4" maxlength="4" />
   		<h3 class="fs-subtitle"> Miles <h3>
-
-  		<!--
-  		<p id="trans_input_bus_miles_q" style="display:none;">How many miles/month do you travel by bus? <a class="help" id="help" title="Automobile Distances<br>Santa Clara University to:<br>Santa Cruz:30.0 miles<br>Valley Fair Mall:2.1 miles<br>Downtown San Jose:3.6 miles <br>San Francisco:46.1 miles <br>Tahoe:228.4 miles" href="#"><img src="images/help.png" width="20px" /></a><br />
-  			<input id="trans_input_bus_miles" type="text"  size="4" maxlength="4"/> miles
-  		</p>
-  	-->
 
 
   		<h3 class="fs-subtitle">Do you use Bart or Caltrain?</h3>
@@ -139,10 +102,6 @@
   			</div>
   		</section>
 
-  		<!--
-  		<input type="radio" name="trans_radio_use_train" value="yes" onclick="display_question('show','trans_input_train_miles')">Yes
-  		<input type="radio" name="trans_radio_use_train" value="no" onclick="display_question('hide','trans_input_train_miles')">No
-  		-->
 
   		<h3 class="fs-subtitle">Have you traveled or do you plan to travel by airplane this year?</h3>
 
@@ -157,14 +116,12 @@
   			</div>
   		</section>
 
-  		<!--
-  		<input type="radio" name="trans_radio_use_plane" value="yes" onclick="display_question('show','trans_input_plane_miles')">Yes
-  		<input type="radio" name="trans_radio_use_plane" value="no" onclick="display_question('hide','trans_input_plane_miles')">No
-  	-->
   		<input type="button" name="previous" class="previous action-button" value="Previous" />
   		<input type="button" name="next" class="next action-button" value="Next" />
   	</fieldset>
 
+    <!-- Partying ------------------------------------------------------------------------------- -->           
+            
     <fieldset>
   		<h2 class="fs-title">Partying</h2>
   		<h3 class="fs-subtitle">How many nights a week do you go out?</h3>
@@ -193,11 +150,6 @@
   			</div>
   		</section>
 
-  		<!--
-  			<input type="radio" name="is_play_drinking_games" value="yes" onclick="display_comment('comment_partying_drinking_games','Maybe consider limiting the number of red cups you use per game...or pull out your reusable cups.')"/>Yes
-  			<input type="radio" name="is_play_drinking_games" value="no"  onclick="display_comment('comment_partying_drinking_games','This may help keep your carbon footprint smaller')"/>No
-  		-->
-
   			<p class="pop_up_comment" id="comment_partying_drinking_games"></p>
 
   		<h3 class="fs-subtitle">Do you use reusable cups? </h3>
@@ -214,10 +166,6 @@
   			<p class="pop_up_comment" id="comment_partying_reusable_cups"></p>
   		</section>
 
-  		<!--
-  		<input type="radio" name="is_use_reusable_cups" value="yes" onclick="display_comment('comment_partying_reusable_cups','Way to go! Just make sure you wash them well! ')"/>Yes
-  		<input type="radio" name="is_use_reusable_cups" value="no" onclick="display_comment('comment_partying_reusable_cups','Using 100 solo cups (five games of beer pong) is equal to nearly using a gallon of gasoline.')"/>No
-  	-->
 
   		<input type="button" name="previous" class="previous action-button" value="Previous" />
   		<input type="button" name="next" class="next action-button" value="Next" />
@@ -251,17 +199,14 @@
           <label for="radio-14"><span class="radio">Other Phone</span></label>
         </div>
       </section>
-
-      <!--
-        <input type="radio" name="is_phone" value="smart_phone" /> Smart Phone &nbsp;&nbsp;
-        <input type="radio" name="is_phone" value="mobile_phone"/> mobile phone
-      <h3 class="fs-subtitle">How long have you had your current eReader? Please approximate in years.</h3>
-    -->
+        
 
       <input type="button" name="previous" class="previous action-button" value="Previous" />
       <input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
 
+    <!-- Energy ------------------------------------------------------------------------------- -->            
+            
     <fieldset>
   		<h2 class="fs-title">Energy</h2>
   		<h2 class="fs-subtitle"> If you're an on campus resident choose from the following dorms:
@@ -398,6 +343,8 @@
   		<input type="button" name="next" class="next action-button" value="Next" />
   	</fieldset>
 
+    <!-- Food ------------------------------------------------------------------------------- -->
+        
     <fieldset>
   		<h2 class="fs-title">Food</h2>
   		<h3 class="fs-subtitle">Please select which meal plan you are currently on.</h3>
@@ -421,12 +368,6 @@
   			</div>
   		</section>
 
-  		<!--
-  				<input type="radio" name="is_meal" value="preferred" />Preferred
-  				<input type="radio" name="is_meal" value="basic"/>Basic
-  				<input type="radio" name="is_meal" value="junior_senior"/>Junior Senior
-  				<input type="radio" name="is_meal" value="basic"/>No meal plan
-  			-->
 
   		<h3 class="fs-subtitle">Please select which diet best applies to you. </h3>
 
@@ -449,12 +390,6 @@
   			</div>
   		</section>
 
-  		<!--
-  				<input type="radio" name="is_diet" value="vegan" />Vegan
-  				<input type="radio" name="is_diet" value="vegetarian"/>Vegetarian
-  				<input type="radio" name="is_diet" value="meat_eater"/>Omnivore
-  				<input type="radio" name="is_diet" value="carnivore"/>X-treme meat eater
-  			-->
 
   		<h3 class="fs-subtitle">If you drink coffee please select from the following options: </h3>
 
@@ -464,15 +399,6 @@
   			<option value="cream_sugar">Black Coffee + cream or sugar</option>
   			<option value="latte">Latte</option>
   		</select>
-
-  		<!--
-  			<select id="food_coffee_type" onchange="food_coffee_select_handler()">
-  				<option value="none">-Select-</option>
-  				<option value="black_coffee">Black Coffee</option>
-  				<option value="cream_sugar">Black Coffee + cream or sugar</option>
-  				<option value="latte">Latte</option>
-  			</select>
-  		-->
 
 
   		<h3 class="fs-subtitle">Do you buy food at farmers markets?</h3>
@@ -489,14 +415,12 @@
   			<p class="pop_up_comment" id="comment_farmers_market"></p>
   		</section>
 
-  		<!--
-  		<input type="radio" name="food_farmers_market" value="yes" onclick="display_comment('comment_farmers_market','Great decision! Buying locally grown food lowers your carbon emissions')" /> yes &nbsp;
-  		<input type="radio" name="food_farmers_market" value="no" onclick="display_comment('comment_farmers_market','You might want to check out the farmers market Saturday mornings in Santa Clara, or visit SCU&rsquo;s Forge Garden located on Benton Street.')" /> no
-  	-->
 
   		<input type="button" name="previous" class="previous action-button" value="Previous" />
   		<input type="button" name="next" class="next action-button" value="Next" />
   	</fieldset>
+        
+    <!-- Waste ------------------------------------------------------------------------------- -->
 
     <fieldset>
   		<h2 class="fs-title">Waste</h2>
@@ -517,47 +441,35 @@
   			</div>
   		</section>
 
-  		<!--
-  			<input type="radio" name="radio_recycle" value="below_avg" />Below Average<br />
-  			<input type="radio" name="radio_recycle" value="avg" />Average<br />
-  			<input type="radio" name="radio_recycle" value="above_avg" />Above Average<br />
-  		-->
-  <!--
-  		<h3 class="fs-subtitle">From the following scale choose the amount of trash you accumulate/day (A bag of sugar weighs 4 lbs. The average person accumulates 4lbs trash/day)</h3>
-  		<p>we need to add something here, not sure what it was before</p>
-  	-->
 
   			<input type="button" name="previous" class="previous action-button" value="Previous" />
   			<input type="button" name="next" class="next action-button" value="Next" />
   	</fieldset>
 
+        
+    <!-- water ------------------------------------------------------------------------------- -->
+
     <fieldset>
         <h2 class="fs-title">Water</h2>
         <h3 class="fs-subtitle">On average how long are your showers?</h3>
-            <input class="stdInput" id="water_showers_duration" type="text"  size="5" maxlength="4"/>
+            <input class="stdInput" id="water_showers_duration" type="text"  size="5" maxlength="4" style="margin-bottom: 20px"/>
         <h3 class="fs-subtitle">On average how many showers/week?</h3>
-            <input class="stdInput" id="water_showers_times" type="text"  size="5" maxlength="4"/>
+            <input class="stdInput" id="water_showers_times" type="text"  size="5" maxlength="4" style="margin-bottom: 20px"/>
         <h3 class="fs-subtitle">On average how many loads of laundry/month?</h3>
-            <input class="stdInput" id="water_laundry" type="text"  size="5" maxlength="4"/>
+            <input class="stdInput" id="water_laundry" type="text"  size="5" maxlength="4" style="margin-bottom: 20px"/>
         <h3 class="fs-subtitle">Average toilet flushes/day?</h3>
-            <input class="stdInput" id="water_flush" type="text"  size="5" maxlength="4"/>
+            <input class="stdInput" id="water_flush" type="text"  size="5" maxlength="4" style="margin-bottom: 20px"/>
       <!--  <h3 class="fs-subtitle">Average cups of water you drink/day from tap or water fountain?</h3>
             <input id="water_cups" type="text"  size="5" maxlength="4"/> cups <a class="help" id="help" title="The average water bottle holds around 2.5 cups and a larger liter bottle holds 4 cups"><img src="images/help.png" width="18px" /></a>
-        <h3 class="fs-subtitle">Do you use a refillable water bottle?</h3>-->
+        <h3 class="fs-subtitle">Do you use a refillable water bottle?</h3>--> <!-- removed question --> 
         <p>  </p>
         <input type="button" name="previous" class="previous action-button" value="Previous" />
         <input type="button" name="next"  onclick="showResult()" class="next action-button" value="Next" />
     </fieldset>
+        
+    <!-- Results ------------------------------------------------------------------------------- -->
+        
     <fieldset>
-    <!--
-        <h2 class="fs-title">Personal Details</h2>
-        <h3 class="fs-subtitle">We will never sell it</h3>
-        <input type="text" name="fname" placeholder="First Name" />
-        <input type="text" name="lname" placeholder="Last Name" />
-        <input type="text" name="phone" placeholder="Phone" />
-        <textarea name="address" placeholder="Address"></textarea>
-
--->
     <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
 
     <p>&nbsp;</p>
@@ -615,11 +527,8 @@
 
 
 
-
-
-
         <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <!--    <input type="submit" name="submit" class="submit action-button" value="Submit" /> -->
+    
     </fieldset>
 
 
