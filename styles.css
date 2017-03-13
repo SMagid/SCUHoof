@@ -249,7 +249,7 @@ body {
 input[type="radio"]:checked + label span.radio::after {
   /*left: -27px;*/
 	left: -36px;
-  background-color: #EBFF43;
+  background-color: #b50043;
 }
 
 /* Check-boxes */
