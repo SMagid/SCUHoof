@@ -312,7 +312,7 @@ function energy_audit_dorm_conv(input)
         result += appliance_total * appliance_watts * 0.001 * appliance_usage * 0.354224 * year_or_day;
         iteration ++;
     }
-    return result;
+    return 0;
 
 }
 
