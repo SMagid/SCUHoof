@@ -305,11 +305,6 @@ function consumption_coffee_conv(input)
     ENERGY
 *******************************************/
 
-/*
-We struggled with fixing the bug in this function. The function is supposed to calculate the carbon footprint of each of the appliences 
-depending on the user usage input. Like some of the other functions we set the return value to 0 instead of result so that our total energy
-carbon fooprint remains defined. For whatever reason, either applience_total, applience_watts, and/or applience_usage is undefined
-*/
 function energy_audit_dorm_conv(input)
 {
     year_or_day=0;
@@ -328,7 +323,7 @@ function energy_audit_dorm_conv(input)
         result += appliance_total * appliance_watts * 0.001 * appliance_usage * 0.354224 * year_or_day;
         iteration ++;
     }
-    return 0;
+    return result;
 
 }
 
