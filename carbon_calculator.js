@@ -19,8 +19,6 @@ function showResult()
     var graph_waste_total = parseFloat(waste_total.toFixed(1));
     var graph_water_total = parseFloat(water_total.toFixed(1));
 
-
-
     var carbon_num_total = trans_total + party_total + cons_total + energy_total + food_total + waste_total + water_total;
     var graph_carbon_total = parseFloat(carbon_num_total.toFixed(2));
 
@@ -73,6 +71,9 @@ function showResult()
     Calculator page handler
 *******************************************/
 
+// display question is a function that will make a pop up question depending on how you answered another question in the form
+// this same idea is used for the other display functions
+
 function display_question(action, field_name)
 {
     if (action=="show"){$("#"+field_name+"_q").show(500);}
@@ -121,6 +122,8 @@ function display_comment(location, message)
     TRANSPORTATION
 *******************************************/
 
+
+//functions regarding car usage
 function trans_car_select_handler()
 {
     car_type= $("#trans_select_car").val();
@@ -141,6 +144,9 @@ function trans_car_conv(input)
     return result;
 }
 
+//functions regarding bus usage
+//we return 0 in this function because we do not include a question to handle this data (leaving the return undefined will make the total undefined as well)
+//for the next group that attempts to complete the carbon calculator, add in input boxes that allow you to consider these values and return result instead of 0
 function trans_bus_conv(input)
 {
     var result=0;
@@ -150,7 +156,7 @@ function trans_bus_conv(input)
     return 0;
 }
 
-//zero for now
+//we return 0 in this function because we do not include a question to handle this data (leaving the return undefined will make the total undefined as well)
 function trans_bart_conv(input)
 {
     var result=0;
@@ -160,7 +166,7 @@ function trans_bart_conv(input)
     return 0;
 }
 
-//zero for now
+//we return 0 in this function because we do not include a question to handle this data (leaving the return undefined will make the total undefined as well)
 function trans_airplane_conv(input)
 {
     var result=0;
@@ -193,6 +199,8 @@ function partying_conv(input)
 /*******************************************
     CONSUMPTION
 *******************************************/
+
+//this function handles textbook input
 function consumption_textbook_conv(input)
 {
     var result=0;
@@ -204,6 +212,7 @@ function consumption_textbook_conv(input)
     return result;
 }
 
+//this function handles clothing input
 function consumption_clothing_conv(input)
 {
     var result=0;
@@ -214,6 +223,7 @@ function consumption_clothing_conv(input)
     return result;
 }
 
+//this function handles cellphone
 function consumption_cellphone_conv(input)
 {
     var year_or_day = 0;
@@ -226,7 +236,8 @@ function consumption_cellphone_conv(input)
     return result;
 }
 
-//we no longer have this question
+//handles eReader input
+//we set the return to 0 for the following functions because we figured the eReader question and ipod question is now irrelevent so we took out the html input for it
 function consumption_eReader_conv(input)
 {
     var year_or_day = 0;
@@ -255,6 +266,7 @@ function consumption_ipod_conv(input)
     return 0;
 }
 
+//this handles the plastic bottle input
 function consumption_plastic_bottle_conv(input)
 {
     var result=0;
@@ -268,7 +280,7 @@ function consumption_plastic_bottle_conv(input)
 }
 
 
-//zero for now
+//we moved this question out of the consumption and put it into food so we set it to zero in the consumption section
 function consumption_coffee_conv(input)
 {
     var result=0;
@@ -293,7 +305,11 @@ function consumption_coffee_conv(input)
     ENERGY
 *******************************************/
 
-//took this function out for now
+/*
+We struggled with fixing the bug in this function. The function is supposed to calculate the carbon footprint of each of the appliences 
+depending on the user usage input. Like some of the other functions we set the return value to 0 instead of result so that our total energy
+carbon fooprint remains defined. For whatever reason, either applience_total, applience_watts, and/or applience_usage is undefined
+*/
 function energy_audit_dorm_conv(input)
 {
     year_or_day=0;
@@ -316,6 +332,7 @@ function energy_audit_dorm_conv(input)
 
 }
 
+//handles the kilowatt hours in the dorms
 function energy_dorms_kwh()
 {
     var dorms = $("#energy_campus_resident").val();
@@ -339,6 +356,7 @@ function energy_dorms_kwh()
     return result;
 }
 
+//handles the energy baseline
 function energy_baseline_conv(input)
 {
     var year_or_day = 0;
@@ -379,6 +397,7 @@ function energy_gas_baseline_conv(input)
 /*******************************************
     FOOD
 *******************************************/
+//handles the coffee input
 function food_coffee_select_handler()
 {
     coffee_type= $("#food_coffee_type").val();
@@ -386,6 +405,7 @@ function food_coffee_select_handler()
     else {display_question('show','food_coffee_frequency');}
 }
 
+//handles the food input
 function food_conv(input)
 {
     var result;
@@ -439,11 +459,7 @@ function waste_conv(input)
     result2 = 1451.91 / 10524 * (1 - recycle_num) * commuter_num / 52 * year_or_day * 1.34 * 1000;
     result3 = 1451.91 / 10524 * commuter_num * 0.1 / 52 * year_or_day * 1.34 * 1000;
     result = result1 + result2;
-
-/*
-    if (trash_input =="less_4lb") {result = result - result3;}
-            else if (trash_input =="more_4lb"){result = result + result3;}
-            */
+    
     return result;
 
 }
