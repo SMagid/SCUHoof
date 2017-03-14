@@ -147,25 +147,27 @@ function trans_bus_conv(input)
     var year_or_day=0;
     if (input=='year') {year_or_day=33;} else {year_or_day = 1/7;}
     result = $("#trans_input_bus_miles").val() * (1 / 0.62137) * 0.18891 * (1/4) * year_or_day;
-    return result;
+    return 0;
 }
 
+//zero for now
 function trans_bart_conv(input)
 {
     var result=0;
     var year_or_day=0;
     if (input=='year') {year_or_day=33;} else {year_or_day = 1/7;}
     result = $("#trans_input_train_miles").val() * (1 / 0.62137) * 0.08761 * (1/4) * year_or_day;
-    return result;
+    return 0;
 }
 
+//zero for now
 function trans_airplane_conv(input)
 {
     var result=0;
     var year_or_day=0;
     if (input=='year') {year_or_day=33;} else {year_or_day = 1/7;}
     result = $("#trans_input_plane_miles").val() * (1 / 0.62137) * 1.09 * 0.20515 * (1/4) * year_or_day;
-    return result;
+    return 0;
 }
 
 
@@ -224,6 +226,7 @@ function consumption_cellphone_conv(input)
     return result;
 }
 
+//we no longer have this question
 function consumption_eReader_conv(input)
 {
     var year_or_day = 0;
@@ -233,9 +236,10 @@ function consumption_eReader_conv(input)
     var which_cell = $("input[name='is_eReader']:checked").val();
     if (which_cell == "iPad"){result = 65 + ( 65 / 4 * years_owned * year_or_day);}
     else if (which_cell =="kindle"){result = 84 + ( 84 / 4 * years_owned * year_or_day);}
-    return result;
+    return 0;
 }
 
+//we no longer have this question
 function consumption_ipod_conv(input)
 {
     var result=0;
@@ -248,7 +252,7 @@ function consumption_ipod_conv(input)
     if ($("input[name='consumption_radio_ipod']:checked").val() =='yes') {owned_ipod=1;}
 
     result = (23 + (23 * ipod_duration /4 * year_or_day))*owned_ipod;
-    return result;
+    return 0;
 }
 
 function consumption_plastic_bottle_conv(input)
@@ -263,6 +267,8 @@ function consumption_plastic_bottle_conv(input)
     return result;
 }
 
+
+//zero for now
 function consumption_coffee_conv(input)
 {
     var result=0;
@@ -279,7 +285,7 @@ function consumption_coffee_conv(input)
         else if (coffee_type=='latte'){coffee_type_num=380;}
 
     result = coffee_type_num * coffee_frequency * 1 / 1000 * year_or_day;
-    return result;
+    return 0;
 }
 
 
@@ -287,6 +293,7 @@ function consumption_coffee_conv(input)
     ENERGY
 *******************************************/
 
+//took this function out for now
 function energy_audit_dorm_conv(input)
 {
     year_or_day=0;
@@ -408,11 +415,11 @@ function waste_conv(input)
     var year_or_day = 0;
     var commuter_input= $("input[name='radio_commuter']:checked").val();
     var recycle_input= $("input[name='radio_recycle']:checked").val();
-    var trash_input = $("input[name='radio_trash']:checked").val();
+    //var trash_input = $("input[name='radio_trash']:checked").val();
 
     var commuter_num = 0;
     var recycle_num =0;
-    var trash_num=0;
+    //var trash_num=0;
     var result1 = 0;
     var result2 = 0;
     var result3 = 0;
@@ -433,9 +440,12 @@ function waste_conv(input)
     result3 = 1451.91 / 10524 * commuter_num * 0.1 / 52 * year_or_day * 1.34 * 1000;
     result = result1 + result2;
 
+/*
     if (trash_input =="less_4lb") {result = result - result3;}
             else if (trash_input =="more_4lb"){result = result + result3;}
+            */
     return result;
+
 }
 
 
@@ -454,7 +464,7 @@ function water_conv(input)
     var total_shower = $("#water_showers_times").val();
     var total_laundry = $("#water_laundry").val();
     var total_flush = $("#water_flush").val();
-    var total_cups = $("#water_cups").val();
+    //var total_cups = $("#water_cups").val();
 
 
     if (input=='year') {year_or_day=33;} else {year_or_day=1/7; multiplier = 1/231;}
@@ -463,7 +473,7 @@ function water_conv(input)
         else if (user_type =="full_commuter") {baseline = 7904.031 * multiplier;}
         else if (user_type =="part_commuter") {baseline = 5269.354 * multiplier;}
 
-    result = baseline + (total_shower * 1.5 * year_or_day) + (13.1 * total_laundry / 4 * year_or_day) + (1.6*total_flush * 7 * year_or_day) + (total_cups * 0.0625 * 7 * year_or_day);
+    result = baseline + (total_shower * 1.5 * year_or_day) + (13.1 * total_laundry / 4 * year_or_day) + (1.6*total_flush * 7 * year_or_day)/* + (total_cups * 0.0625 * 7 * year_or_day)*/;
     result = (result * 3.785 * 0.000001 * 352 );
 
     return result;
