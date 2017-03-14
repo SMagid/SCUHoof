@@ -25,12 +25,27 @@
     <fieldset>
       <h2 class="fs-title">Please select a living situation</h2>
 
-      <select class="soflow">
+      <section class="section">
+        <div class="container">
+          <input type="radio" id="radio-1" name="radio_commuter" value="on_campus" >
+          <label for="radio-1"><span class="radio">On Campus</span></label>
+        </div>
+        <div class="container">
+          <input type="radio" id="radio-2" name="radio_commuter" value="full_commuter">
+          <label for="radio-2"><span class="radio">Off Campus/Full Time Commuter</span></label>
+        </div>
+        <div class="container">
+          <input type="radio" id="radio-3" name="radio_commuter" value="part_commuter">
+          <label for="radio-3"><span class="radio">Part Time Commuter/Faculty/Staff</span></label>
+        </div>
+      </section>
+
+      <!-- <select name="radio_commuter" class="soflow">
         <option>Select an Option</option>
         <option value="on_campus" onclick="display_tabs('show')">On Campus</option>
         <option value="full_commuter" onclick="display_tabs('show')">Off Campus/Full Time Commuter</option>
         <option value="part_commuter" onclick="display_tabs('show')">Part Time Commuter/Faculty/Staff</option>
-      </select>
+      </select> -->
 
       <!--
       <div id="livingDiv" class="dropdown">
@@ -59,12 +74,12 @@
 
   		<section id="first" class="section">
       	<div class="container">
-        	<input type="radio" id="radio-1" name="trans_radio_lsb" value="yes" onclick="display_comment('comment_transportation_lsb','Great decision! You are not only staying healthy, but you are reducing your carbon emissions.')">
-        	<label for="radio-1"><span class="radio">Yes</span></label>
+        	<input type="radio" id="radio-4" name="trans_radio_lsb" value="yes" onclick="display_comment('comment_transportation_lsb','Great decision! You are not only staying healthy, but you are reducing your carbon emissions.')">
+        	<label for="radio-4"><span class="radio">Yes</span></label>
       	</div>
       	<div class="container">
-        	<input type="radio" id="radio-2" name="trans_radio_lsb" value="no" onclick="display_comment('comment_transportation_lsb','Unless you are walking you might want to consider using one of these to help you get to class. Not only will you stay fit, but you can also reduce your carbon emissions.')">
-        	<label for="radio-2"><span class="radio">No</span></label>
+        	<input type="radio" id="radio-5" name="trans_radio_lsb" value="no" onclick="display_comment('comment_transportation_lsb','Unless you are walking you might want to consider using one of these to help you get to class. Not only will you stay fit, but you can also reduce your carbon emissions.')">
+        	<label for="radio-5"><span class="radio">No</span></label>
       	</div>
   			<p class="pop_up_comment" id="comment_transportation_lsb"></p>
   		</section>
@@ -75,7 +90,7 @@
   	-->
   		<h3 class="fs-subtitle">If you answered no please seclect on of the following:</h3>
 
-  		<select class="soflow">
+  		<select id="trans_select_car"class="soflow">
   			<option>Select an Option</option>
     		<option value="no_car">No Car</option>
   			<option value="small">Small</option>
@@ -101,12 +116,12 @@
 
   		<section class="section">
   			<div class="container">
-  				<input type="radio" id="radio-3" name="trans_radio_use_bus" value="yes" onclick="display_question('show','trans_input_bus_miles')">
-  				<label for="radio-3"><span class="radio">Yes</span></label>
+  				<input type="radio" id="radio-6" name="trans_radio_use_bus" value="yes" onclick="display_question('show','trans_input_bus_miles')">
+  				<label for="radio-6"><span class="radio">Yes</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-4" name="trans_radio_use_bus" value="no" onclick="display_question('hide','trans_input_bus_miles')">
-  				<label for="radio-4"><span class="radio">No</span></label>
+  				<input type="radio" id="radio-7" name="trans_radio_use_bus" value="no" onclick="display_question('hide','trans_input_bus_miles')">
+  				<label for="radio-7"><span class="radio">No</span></label>
   			</div>
   		</section>
 
@@ -130,12 +145,12 @@
 
   		<section class="section">
   			<div class="container">
-  				<input type="radio" id="radio-5" name="trans_radio_use_train" value="yes" onclick="display_question('show','trans_input_train_miles')">
-  				<label for="radio-5"><span class="radio">Yes</span></label>
+  				<input type="radio" id="radio-8" name="trans_radio_use_train" value="yes" onclick="display_question('show','trans_input_train_miles')">
+  				<label for="radio-8"><span class="radio">Yes</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-6" name="trans_radio_use_train" value="no" onclick="display_question('hide','trans_input_train_miles')">
-  				<label for="radio-6"><span class="radio">No</span></label>
+  				<input type="radio" id="radio-9" name="trans_radio_use_train" value="no" onclick="display_question('hide','trans_input_train_miles')">
+  				<label for="radio-9"><span class="radio">No</span></label>
   			</div>
   		</section>
 
@@ -148,12 +163,12 @@
 
   		<section class="section">
   			<div class="container">
-  				<input type="radio" id="radio-7" name="trans_radio_use_plane" value="yes" onclick="display_question('show','trans_input_plane_miles')">
-  				<label for="radio-7"><span class="radio">Yes</span></label>
+  				<input type="radio" id="radio-10" name="trans_radio_use_plane" value="yes" onclick="display_question('show','trans_input_plane_miles')">
+  				<label for="radio-10"><span class="radio">Yes</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-8" name="trans_radio_use_plane" value="no" onclick="display_question('hide','trans_input_plane_miles')">
-  				<label for="radio-8"><span class="radio">No</span></label>
+  				<input type="radio" id="radio-11" name="trans_radio_use_plane" value="no" onclick="display_question('hide','trans_input_plane_miles')">
+  				<label for="radio-11"><span class="radio">No</span></label>
   			</div>
   		</section>
 
@@ -184,12 +199,12 @@
 
   		<section class="section">
   			<div class="container">
-  				<input type="radio" id="radio-9" name="is_play_drinking_games" value="yes" onclick="display_comment('comment_partying_drinking_games','Maybe consider limiting the number of red cups you use per game...or pull out your reusable cups.')"/>
-  				<label for="radio-9"><span class="radio">Yes</span></label>
+  				<input type="radio" id="radio-12" name="is_play_drinking_games" value="yes" onclick="display_comment('comment_partying_drinking_games','Maybe consider limiting the number of red cups you use per game...or pull out your reusable cups.')"/>
+  				<label for="radio-12"><span class="radio">Yes</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-10" name="is_play_drinking_games" value="no"  onclick="display_comment('comment_partying_drinking_games','This may help keep your carbon footprint smaller')"/>
-  				<label for="radio-10"><span class="radio">No</span></label>
+  				<input type="radio" id="radio-13" name="is_play_drinking_games" value="no"  onclick="display_comment('comment_partying_drinking_games','This may help keep your carbon footprint smaller')"/>
+  				<label for="radio-13"><span class="radio">No</span></label>
   			</div>
   		</section>
 
@@ -204,12 +219,12 @@
 
   		<section class="section">
   			<div class="container">
-  				<input type="radio" id="radio-11" name="is_use_reusable_cups" value="yes" onclick="display_comment('comment_partying_reusable_cups','Way to go! Just make sure you wash them well! ')"/>
-  				<label for="radio-11"><span class="radio">Yes</span></label>
+  				<input type="radio" id="radio-14" name="is_use_reusable_cups" value="yes" onclick="display_comment('comment_partying_reusable_cups','Way to go! Just make sure you wash them well! ')"/>
+  				<label for="radio-14"><span class="radio">Yes</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-12" name="is_use_reusable_cups" value="no" onclick="display_comment('comment_partying_reusable_cups','Using 100 solo cups (five games of beer pong) is equal to nearly using a gallon of gasoline.')"/>
-  				<label for="radio-12"><span class="radio">No</span></label>
+  				<input type="radio" id="radio-15" name="is_use_reusable_cups" value="no" onclick="display_comment('comment_partying_reusable_cups','Using 100 solo cups (five games of beer pong) is equal to nearly using a gallon of gasoline.')"/>
+  				<label for="radio-15"><span class="radio">No</span></label>
   			</div>
   			<p class="pop_up_comment" id="comment_partying_reusable_cups"></p>
   		</section>
@@ -235,20 +250,20 @@
         <input class="stdInput" id="clothing_per_month" type="text"  size="2" maxlength="4"/>
       <h3 class="fs-subtitle">Clothing/Month</h3>
       <h3 class="fs-subtitle">If you drink your water from nonrefillable plastic bottles, how many do you buy/week?</h3>
-        <input id="consumption_plastic_bottle" type="text"  size="5" maxlength="4"/>
+        <input class="stdInput" id="consumption_plastic_bottle" type="text"  size="5" maxlength="4"/>
       <h3 class="fs-subtitle">Bottles</h3>
       <h3 class="fs-subtitle">How long have you had your current cell phone? Please approximate in years.</h3>
-        <input id="duration_owning_cell_phone" type="text"  size="2" maxlength="4"/>
+        <input class="stdInput" id="duration_owning_cell_phone" type="text"  size="2" maxlength="4"/>
       <h3 class="fs-subtitle">Years</h3>
 
       <section class="section">
         <div class="container">
-          <input type="radio" id="radio-13" name="is_phone" value="smart_phone" /> &nbsp;&nbsp;
-          <label for="radio-13"><span class="radio">Smart Phone</span></label>
+          <input type="radio" id="radio-16" name="is_phone" value="smart_phone" /> &nbsp;&nbsp;
+          <label for="radio-16"><span class="radio">Smart Phone</span></label>
         </div>
         <div class="container">
-          <input type="radio" id="radio-14" name="is_phone" value="mobile_phone"/>
-          <label for="radio-14"><span class="radio">Other Phone</span></label>
+          <input type="radio" id="radio-17" name="is_phone" value="mobile_phone"/>
+          <label for="radio-17"><span class="radio">Other Phone</span></label>
         </div>
       </section>
 
@@ -265,7 +280,24 @@
     <fieldset>
   		<h2 class="fs-title">Energy</h2>
   		<h2 class="fs-subtitle"> If you're an on campus resident choose from the following dorms:
-  		<select class="soflow">
+
+        <!-- <h3 class="fs-subtitle">
+        <select id="energy_campus_resident">
+          <option value="none">None</option>
+          <option value="swig">Swig</option>
+          <option value="sobrato">Sobrato</option>
+          <option value="sanfilippo">Sanfilippo</option>
+          <option value="walsh">Walsh/McLaughlin</option>
+          <option value="graham">Graham</option>
+          <option value="dunne">Dunne</option>
+          <option value="casa">Casa</option>
+          <option value="campisi">Campisi</option>
+          <option value="clare">St. Clare</option>
+          <option value="nobili">Nobili</option>
+          <option value="bellarmine">Bellarmine </option>
+        </select> -->
+
+  		<select id="energy_campus_resident" class="soflow">
   			<option>Select an Option</option>
   			<option value="swig" onclick="display_tabs('show')">Swig</option>
   			<option value="sobrato" onclick="display_tabs('show')">Sobrato</option>
@@ -296,100 +328,100 @@
 
   				<tr>
   					<td>Refrigerator</td>
-  					<td><input id="appliance_1_total" type="text"  size="2" maxlength="1"/></td>
-  					<td><input id="appliance_1_watts" type="hidden"  value="160" />160</td>
-  					<td><input id="appliance_1_usage" type="text"  size="2" maxlength="2"/></td>
+  					<td><input class="stdInput" id="appliance_1_total" type="text"  size="2" maxlength="1"/></td>
+  					<td><input class="stdInput" id="appliance_1_watts" type="hidden"  value="160" />160</td>
+  					<td><input class="stdInput" id="appliance_1_usage" type="text"  size="2" maxlength="2"/></td>
   				</tr>
 
   				<tr>
   					<td>Microwave</td>
-  					<td><input id="appliance_2_total" type="text"  size="4" maxlength="1"/></td>
-  					<td><input id="appliance_2_watts" type="hidden"  value="1000" />1000</td>
-  					<td><input id="appliance_2_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_2_total" type="text"  size="4" maxlength="1"/></td>
+  					<td><input class="stdInput" id="appliance_2_watts" type="hidden"  value="1000" />1000</td>
+  					<td><input class="stdInput" id="appliance_2_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
   				<tr>
   					<td>Coffee maker</td>
-  					<td><input id="appliance_4_total" type="text"  size="4" maxlength="1"/></td>
-  					<td><input id="appliance_4_watts" type="hidden"  value="1200" />1200</td>
-  					<td><input id="appliance_4_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_4_total" type="text"  size="4" maxlength="1"/></td>
+  					<td><input class="stdInput" id="appliance_4_watts" type="hidden"  value="1200" />1200</td>
+  					<td><input class="stdInput" id="appliance_4_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
   				<tr>
   					<td>Stereo sound system</td>
-  					<td><input id="appliance_6_total" type="text"  size="4" maxlength="1"/></td>
-  					<td><input id="appliance_6_watts" type="hidden"  value="150" />150</td>
-  					<td><input id="appliance_6_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_6_total" type="text"  size="4" maxlength="1"/></td>
+  					<td><input class="stdInput" id="appliance_6_watts" type="hidden"  value="150" />150</td>
+  					<td><input class="stdInput" id="appliance_6_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
   				<tr>
   					<td>Computer desktop</td>
-  					<td><input id="appliance_7_total" type="text"  size="4" maxlength="1"/></td>
-  					<td><input id="appliance_7_watts" type="hidden"  value="225" />225</td>
-  					<td><input id="appliance_7_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_7_total" type="text"  size="4" maxlength="1"/></td>
+  					<td><input class="stdInput" id="appliance_7_watts" type="hidden"  value="225" />225</td>
+  					<td><input class="stdInput" id="appliance_7_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
   				<tr>
   					<td>Computer, laptop</td>
-  					<td><input id="appliance_9_total" type="text"  size="4" maxlength="1"/></td>
-  					<td><input id="appliance_9_watts" type="hidden"  value="60" />60</td>
-  					<td><input id="appliance_9_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_9_total" type="text"  size="4" maxlength="1"/></td>
+  					<td><input class="stdInput" id="appliance_9_watts" type="hidden"  value="60" />60</td>
+  					<td><input class="stdInput" id="appliance_9_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
   				<tr>
   					<td>Printer</td>
-  					<td><input id="appliance_10_total" type="text"  size="4" maxlength="1"/></td>
-  					<td><input id="appliance_10_watts" type="hidden"  value="100" />100</td>
-  					<td><input id="appliance_10_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_10_total" type="text"  size="4" maxlength="1"/></td>
+  					<td><input class="stdInput" id="appliance_10_watts" type="hidden"  value="100" />100</td>
+  					<td><input class="stdInput" id="appliance_10_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
   				<tr>
   					<td>TV</td>
-  					<td><input id="appliance_11_total" type="text"  size="4" maxlength="1"/></td>
-  					<td><input id="appliance_11_watts" type="hidden"  value="115" />115</td>
-  					<td><input id="appliance_11_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_11_total" type="text"  size="4" maxlength="1"/></td>
+  					<td><input class="stdInput" id="appliance_11_watts" type="hidden"  value="115" />115</td>
+  					<td><input class="stdInput" id="appliance_11_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
   				<tr>
   					<td>Air conditioner</td>
-  					<td><input id="appliance_13_total" type="text"  size="4" maxlength="1"/></td>
-  					<td><input id="appliance_13_watts" type="hidden"  value="1100" />1,100</td>
-  					<td><input id="appliance_13_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_13_total" type="text"  size="4" maxlength="1"/></td>
+  					<td><input class="stdInput" id="appliance_13_watts" type="hidden"  value="1100" />1,100</td>
+  					<td><input class="stdInput" id="appliance_13_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
   				<tr>
   					<td>Portable fan</td>
-  					<td><input id="appliance_14_total" type="text"  size="4" maxlength="1"/></td>
-  					<td><input id="appliance_14_watts" type="hidden"  value="115" />115</td>
-  					<td><input id="appliance_14_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_14_total" type="text"  size="4" maxlength="1"/></td>
+  					<td><input class="stdInput" id="appliance_14_watts" type="hidden"  value="115" />115</td>
+  					<td><input class="stdInput" id="appliance_14_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
   				<tr>
   					<td>Space heater</td>
-  					<td><input id="appliance_15_total" type="text"  size="4" maxlength="1"/></td>
-  					<td><input id="appliance_15_watts" type="hidden"  value="1000" />1000</td>
-  					<td><input id="appliance_15_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_15_total" type="text"  size="4" maxlength="1"/></td>
+  					<td><input class="stdInput" id="appliance_15_watts" type="hidden"  value="1000" />1000</td>
+  					<td><input class="stdInput" id="appliance_15_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
   				<tr>
   					<td>Incandescent light bulb</td>
-  					<td><input id="appliance_17_total" type="text"  size="4" maxlength="4"/></td>
-  					<td><input id="appliance_17_watts" type="hidden"  value="75" />75</td>
-  					<td><input id="appliance_17_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_17_total" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_17_watts" type="hidden"  value="75" />75</td>
+  					<td><input  class="stdInput" id="appliance_17_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
   				<tr>
   					<td>Compact fluorescent light bulb</td>
-  					<td><input id="appliance_18_total" type="text"  size="4" maxlength="4"/></td>
-  					<td><input id="appliance_18_watts" type="hidden"  value="20" />20</td>
-  					<td><input id="appliance_18_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_18_total" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_18_watts" type="hidden"  value="20" />20</td>
+  					<td><input class="stdInput" id="appliance_18_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
   				<tr>
   					<td>Vacuum cleaner</td>
-  					<td><input id="appliance_19_total" type="text"  size="4" maxlength="1"/></td>
-  					<td><input id="appliance_19_watts" type="hidden"  value="1440" />1440</td>
-  					<td><input id="appliance_19_usage" type="text"  size="4" maxlength="4"/></td>
+  					<td><input class="stdInput" id="appliance_19_total" type="text"  size="4" maxlength="1"/></td>
+  					<td><input class="stdInput" id="appliance_19_watts" type="hidden"  value="1440" />1440</td>
+  					<td><input class="stdInput" id="appliance_19_usage" type="text"  size="4" maxlength="4"/></td>
   				</tr>
 
 
@@ -404,20 +436,20 @@
 
   		<section class="section">
   			<div class="container">
-  				<input type="radio" id="radio-15" name="is_meal" value="preferred" />
-  				<label for="radio-15"><span class="radio">Preferred</span></label>
+  				<input type="radio" id="radio-18" name="is_meal" value="preferred" />
+  				<label for="radio-18"><span class="radio">Preferred</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-16" name="is_meal" value="basic"/>
-  				<label for="radio-16"><span class="radio">Basic</span></label>
+  				<input type="radio" id="radio-19" name="is_meal" value="basic"/>
+  				<label for="radio-19"><span class="radio">Basic</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-17" name="is_meal" value="junior_senior"/>
-  				<label for="radio-17"><span class="radio">Junior/Senior</span></label>
+  				<input type="radio" id="radio-20" name="is_meal" value="junior_senior"/>
+  				<label for="radio-20"><span class="radio">Junior/Senior</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-18" name="is_meal" value="basic"/>
-  				<label for="radio-18"><span class="radio">No Meal Plan</span></label>
+  				<input type="radio" id="radio-21" name="is_meal" value="basic"/>
+  				<label for="radio-21"><span class="radio">No Meal Plan</span></label>
   			</div>
   		</section>
 
@@ -432,20 +464,20 @@
 
   		<section class="section">
   			<div class="container">
-  				<input type="radio" id="radio-19" name="is_diet" value="vegan" />
-  				<label for="radio-19"><span class="radio">Vegan</span></label>
+  				<input type="radio" id="radio-22" name="is_diet" value="vegan" />
+  				<label for="radio-22"><span class="radio">Vegan</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-20" name="is_diet" value="vegetarian"/>
-  				<label for="radio-20"><span class="radio">Vegetarian</span></label>
+  				<input type="radio" id="radio-23" name="is_diet" value="vegetarian"/>
+  				<label for="radio-23"><span class="radio">Vegetarian</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-21" name="is_diet" value="meat_eater"/>
-  				<label for="radio-21"><span class="radio">Omnivore</span></label>
+  				<input type="radio" id="radio-24" name="is_diet" value="meat_eater"/>
+  				<label for="radio-24"><span class="radio">Omnivore</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-22" name="is_diet" value="carnivore"/>
-  				<label for="radio-22"><span class="radio">X-treme meat eater</span></label>
+  				<input type="radio" id="radio-25" name="is_diet" value="carnivore"/>
+  				<label for="radio-25"><span class="radio">X-treme meat eater</span></label>
   			</div>
   		</section>
 
@@ -479,12 +511,12 @@
 
   		<section class="section">
   			<div class="container">
-  				<input type="radio" id="radio-23" name="food_farmers_market" value="yes" onclick="display_comment('comment_farmers_market','Great decision! Buying locally grown food lowers your carbon emissions')" /> &nbsp;
-  				<label for="radio-23"><span class="radio">Yes</span></label>
+  				<input type="radio" id="radio-26" name="food_farmers_market" value="yes" onclick="display_comment('comment_farmers_market','Great decision! Buying locally grown food lowers your carbon emissions')" /> &nbsp;
+  				<label for="radio-26"><span class="radio">Yes</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-24" name="food_farmers_market" value="no" onclick="display_comment('comment_farmers_market','You might want to check out the farmers market Saturday mornings in Santa Clara, or visit SCU&rsquo;s Forge Garden located on Benton Street.')" />
-  				<label for="radio-24"><span class="radio">No</span></label>
+  				<input type="radio" id="radio-27" name="food_farmers_market" value="no" onclick="display_comment('comment_farmers_market','You might want to check out the farmers market Saturday mornings in Santa Clara, or visit SCU&rsquo;s Forge Garden located on Benton Street.')" />
+  				<label for="radio-27"><span class="radio">No</span></label>
   			</div>
   			<p class="pop_up_comment" id="comment_farmers_market"></p>
   		</section>
@@ -504,16 +536,16 @@
 
   		<section class="section">
   			<div class="container">
-  				<input type="radio" id="radio-25" name="radio_recycle" value="below_avg" />
-  				<label for="radio-25"><span class="radio">Below Average</span></label>
+  				<input type="radio" id="radio-28" name="radio_recycle" value="below_avg" />
+  				<label for="radio-28"><span class="radio">Below Average</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-26" name="radio_recycle" value="avg" />
-  				<label for="radio-26"><span class="radio">Average</span></label>
+  				<input type="radio" id="radio-29" name="radio_recycle" value="avg" />
+  				<label for="radio-29"><span class="radio">Average</span></label>
   			</div>
   			<div class="container">
-  				<input type="radio" id="radio-27" name="radio_recycle" value="above_avg" />
-  				<label for="radio-27"><span class="radio">Above Average</span></label>
+  				<input type="radio" id="radio-30" name="radio_recycle" value="above_avg" />
+  				<label for="radio-30"><span class="radio">Above Average</span></label>
   			</div>
   		</section>
 
@@ -534,16 +566,17 @@
     <fieldset>
         <h2 class="fs-title">Water</h2>
         <h3 class="fs-subtitle">On average how long are your showers?</h3>
-            <input id="water_showers_duration" type="text"  size="5" maxlength="4"/>
+            <input class="stdInput" id="water_showers_duration" type="text"  size="5" maxlength="4"/>
         <h3 class="fs-subtitle">On average how many showers/week?</h3>
-            <input id="water_showers_times" type="text"  size="5" maxlength="4"/>
+            <input class="stdInput" id="water_showers_times" type="text"  size="5" maxlength="4"/>
         <h3 class="fs-subtitle">On average how many loads of laundry/month?</h3>
-            <input id="water_laundry" type="text"  size="5" maxlength="4"/>
+            <input class="stdInput" id="water_laundry" type="text"  size="5" maxlength="4"/>
         <h3 class="fs-subtitle">Average toilet flushes/day?</h3>
-            <input id="water_flush" type="text"  size="5" maxlength="4"/>
+            <input class="stdInput" id="water_flush" type="text"  size="5" maxlength="4"/>
       <!--  <h3 class="fs-subtitle">Average cups of water you drink/day from tap or water fountain?</h3>
             <input id="water_cups" type="text"  size="5" maxlength="4"/> cups <a class="help" id="help" title="The average water bottle holds around 2.5 cups and a larger liter bottle holds 4 cups"><img src="images/help.png" width="18px" /></a>
         <h3 class="fs-subtitle">Do you use a refillable water bottle?</h3>-->
+        <p>  </p>
         <input type="button" name="previous" class="previous action-button" value="Previous" />
         <input type="button" name="next"  onclick="showResult()" class="next action-button" value="Next" />
     </fieldset>
